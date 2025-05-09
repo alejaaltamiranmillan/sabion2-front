@@ -13,7 +13,7 @@ const TriviaGame = () => {
 
   const startTrivia = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/chat/trivia', { topic });
+      const res = await axios.post('https://sabion2-back.vercel.app/api/chat/trivia', { topic });
       setQuestions(res.data.questions);
     } catch (error) {
       console.error('Error al obtener preguntas:', error);
